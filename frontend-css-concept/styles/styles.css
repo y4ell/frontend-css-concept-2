@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400;500;600&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        4.3 Work
+
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html  {
+    font-size: 14px;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --chrysler-blue: #5722cdff;
+    --majorelle-blue: #4b49e8ff;
+    --magnolia: #f2f0ffff;
+    --french-rose: #ed4385ff;
+    --night: #0c0c0cff;
+    --licht-grey: #F3F6F9;
+    --grey:  #7A7A7A;
+}
+
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: var(--night);
+}
+
+input,
+button,
+form {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: var(--chrysler-blue);
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+
+button {
+    background-color: var(--french-rose);
+    color: var(--magnolia);
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--french-rose);
+    cursor: pointer;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 52%, rgba(87,34,205,1) 100%);
+    color: var(--magnolia);
+    font-weight: 300;
+    position: relative;
+}
+
+.header-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header .inner-container {
+    flex-basis: 320px;
+    max-width: 600px;
+    padding: 0 0 6rem 0;
+    margin: 4rem 0;
+}
+
+header h1 {
+    text-align: center;
+    padding: .5em;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-basis: auto;
+    flex-shrink: 1;
+    flex-grow: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding: 1em 2em;
+}
+
+.navigation a {
+    color: var(--magnolia);
+}
+
+
+.header-squiggle {
+    position: absolute;
+    width: 3.5rem;
+    bottom: 0;
+}
+
+header h1 {
+    margin: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header button {
+    width: 12rem;
+    margin: 1.5rem;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.hello {
+    color: var(--chrysler-blue);
+}
+
+.hello .inner-container {
+    width: 600px;
+    margin: 4rem 4rem;
+}
+
+.hello h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.hello p {
+    color: var(--night);
+    font-weight: 500;
+    margin: 3.5rem 0 0 0;
+}
+
+/* --------------- 4.3 Work ------------------- */
+
+
+.work {
+    background-color: var(--licht-grey);
+}
+
+.work .inner-container {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+}
+
+.work article {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.work h2 {
+    text-align: left;
+}
+
+.work article:nth-child(even) {
+    flex-direction: row;
+}
+
+.picture-work {
+    width: 100%;
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    line-height: 0;
+    box-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.photo-work {
+    display: block;
+}
+
+
+.description-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20em;
+    padding: 3em;
+}
+
+.work-squiggle {
+    max-width: 40px;
+    margin: 2em 0;
+}
+
+.work a,
+.work a:visited {
+    text-transform: uppercase;
+    margin: 2em 0;
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+
+.inner-container-services {
+    display: flex;
+    flex-direction: column;
+    width: 85rem;
+    margin: 4rem;
+}
+
+
+.description-services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3rem 0;
+}
+
+.description-services article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    border: 1px solid var(--chrysler-blue);
+    box-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 3rem 1rem;
+}
+
+.description-services img {
+    width: 60px;
+}
+
+.services h3 {
+    color: var(--chrysler-blue);
+    padding: 1.5rem 0;
+}
+
+.services p {
+    color: var(--grey);
+}
+
+/* --------------- 4.5 Form ------------------- */
+
+
+.form-container {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 52%, rgba(87, 34, 205, 1) 100%);
+    color: var(--magnolia);
+    font-weight: 300;
+}
+
+.form-container .inner-container {
+    margin: 4rem;
+    width: 45rem;
+}
+.form-container h1 {
+    font-size: 3rem;
+}
+
+.form-container p {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem;
+    margin: 0 0 2rem 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: Roboto, 'Arial', sans-serif;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea[type="message-field"]
+{
+    font-size: 0.8rem;
+    font-family: Roboto, 'Arial', sans-serif;
+}
+
+
+button {
+    align-self: center;
+    width: 10rem;
+    margin: 1.5rem;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+}
+
+/* --------------- 4.5 Footer ------------------- */
+
+
+.footer {
+    padding: 1rem;
+    font-family: Roboto, 'Arial', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    background-color: var(--night);
+    color: var(--magnolia);
+}
+
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 12px;
+    }
+}
